@@ -1,0 +1,17 @@
+name: Check entries
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check-entries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Every item has its required fields
+        run: bash scripts/check-entries.sh
