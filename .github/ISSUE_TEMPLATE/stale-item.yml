@@ -1,0 +1,23 @@
+name: Report a stale or broken item
+description: Something here no longer works the way it says.
+title: "[Stale] "
+labels: ["stale"]
+body:
+  - type: input
+    id: item
+    attributes:
+      label: Which item?
+      placeholder: P3, or a link to the file
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What's different now?
+      description: Renamed button, removed feature, different result, new licence requirement…
+    validations:
+      required: true
+  - type: input
+    id: when
+    attributes:
+      label: When did you notice? Which platform (Windows, Mac, web, mobile)?
